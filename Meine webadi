@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdrianImSand - Gaming Content Creator</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6441a5',secondary:'#f43f5e'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Montserrat', sans-serif;
+background-color: #f8f9fa;
+}
+.stream-schedule-item:not(:last-child)::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 1rem;
+right: 1rem;
+height: 1px;
+background-color: #e5e7eb;
+}
+</style>
+</head>
+<body class="bg-gray-50">
+<!-- Navigation Bar -->
+<nav class="fixed w-full top-0 bg-white shadow-md z-50">
+<div class="max-w-[375px] mx-auto px-4 py-3 flex justify-between items-center">
+<div class="font-['Pacifico'] text-primary text-xl">AdrianImSand</div>
+<div class="hidden md:flex space-x-4">
+<a href="https://twitch.tv/adrianImsand" class="text-gray-700 hover:text-primary">Mein Twitch</a>
+<a href="https://youtube.com/@adrianImsand" class="text-gray-700 hover:text-primary">Mein YouTube</a>
+<a href="https://tiktok.com/@adrian_051109" class="text-gray-700 hover:text-primary">Mein TikTok</a>
+</div>
+<button id="menuButton" class="w-8 h-8 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden max-w-[375px] mx-auto bg-white py-2 px-4">
+<a href="https://twitch.tv/adrianImsand" class="block py-2 text-gray-700 hover:text-primary">
+<i class="ri-twitch-line mr-2"></i>Twitch
+</a>
+<a href="https://youtube.com/@adrianImsand" class="block py-2 text-gray-700 hover:text-primary">
+<i class="ri-youtube-line mr-2"></i>YouTube
+</a>
+<a href="https://tiktok.com/@adrian_051109" class="block py-2 text-gray-700 hover:text-primary">
+<i class="ri-tiktok-line mr-2"></i>TikTok
+</a>
+</div>
+</nav>
+<div class="max-w-[375px] mx-auto pt-16 pb-16">
+<!-- Hero Section -->
+<section class="relative">
+<div class="h-40 w-full overflow-hidden bg-gradient-to-r from-primary/10 to-primary/30">
+</div>
+<div class="flex flex-col items-center -mt-12">
+<div class="w-24 h-24 rounded-full border-4 border-white overflow-hidden bg-white shadow-lg">
+<div class="w-full h-full bg-primary/10 flex items-center justify-center">
+<i class="ri-user-3-line text-4xl text-primary"></i>
+</div>
+</div>
+<h1 class="mt-2 text-xl font-semibold">AdrianImSand</h1>
+<p class="text-gray-600 text-sm">Content Creator aus Deutschland</p>
+<div class="flex space-x-3 mt-4">
+<a href="https://instagram.com/adrian_051109" class="w-10 h-10 flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-500 text-white rounded-full cursor-pointer">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://discord.gg/adrianImsand" class="w-10 h-10 flex items-center justify-center bg-[#5865F2] text-white rounded-full cursor-pointer">
+<i class="ri-discord-line"></i>
+</a>
+<a href="https://twitch.tv/adrianImsand" class="w-10 h-10 flex items-center justify-center bg-[#6441a5] text-white rounded-full cursor-pointer">
+<i class="ri-twitch-line"></i>
+</a>
+<a href="https://youtube.com/@adrianImsand" class="w-10 h-10 flex items-center justify-center bg-[#FF0000] text-white rounded-full cursor-pointer">
+<i class="ri-youtube-line"></i>
+</a>
+<a href="https://tiktok.com/@adrian_051109" class="w-10 h-10 flex items-center justify-center bg-black text-white rounded-full cursor-pointer">
+<i class="ri-tiktok-line"></i>
+</a>
+</div>
+</div>
+</section>
+<!-- Live Status -->
+<section class="mt-8 px-4">
+<div class="bg-white rounded-lg shadow-md p-4">
+<div class="flex items-center">
+<div class="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+<span class="ml-2 font-medium">LIVE auf Twitch</span>
+</div>
+<div class="mt-3 rounded overflow-hidden bg-primary/5 h-[211px] flex items-center justify-center">
+<i class="ri-live-line text-4xl text-primary"></i>
+</div>
+<h3 class="mt-2 font-medium">Gemütlicher Talk-Stream! 💭</h3>
+<p class="text-sm text-gray-600">Kommt vorbei und lasst uns zusammen quatschen!</p>
+<a href="https://twitch.tv/adrianImsand" class="mt-3 block w-full bg-primary text-white py-2 text-center font-medium rounded-button cursor-pointer">
+Stream ansehen
+</a>
+</div>
+</section>
+<!-- Stream Schedule -->
+<section class="mt-6 px-4">
+<h2 class="text-lg font-semibold mb-3">Stream Zeitplan</h2>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative p-4 stream-schedule-item">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="font-medium">Montag</h4>
+<p class="text-sm text-gray-600">Fortnite</p>
+</div>
+<span class="text-sm font-medium">18:00 - 22:00</span>
+</div>
+</div>
+<div class="relative p-4 stream-schedule-item">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="font-medium">Mittwoch</h4>
+<p class="text-sm text-gray-600">Minecraft</p>
+</div>
+<span class="text-sm font-medium">19:00 - 23:00</span>
+</div>
+</div>
+<div class="relative p-4 stream-schedule-item">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="font-medium">Freitag</h4>
+<p class="text-sm text-gray-600">Valorant</p>
+</div>
+<span class="text-sm font-medium">20:00 - 00:00</span>
+</div>
+</div>
+<div class="relative p-4">
+<div class="flex justify-between items-center">
+<div>
+<h4 class="font-medium">Sonntag</h4>
+<p class="text-sm text-gray-600">Viewer Games</p>
+</div>
+<span class="text-sm font-medium">16:00 - 20:00</span>
+</div>
+</div>
+</div>
+</section>
+<!-- YouTube Videos -->
+<section class="mt-6 px-4">
+<div class="flex justify-between items-center mb-3">
+<h2 class="text-lg font-semibold">Meine Videos</h2>
+<a href="https://youtube.com/@adrianImsand" class="text-primary text-sm cursor-pointer">Alle Videos</a>
+</div>
+<div class="space-y-4">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative bg-primary/5 h-[211px] flex items-center justify-center">
+<i class="ri-youtube-line text-4xl text-primary"></i>
+<div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-1 rounded">12:45</div>
+</div>
+<div class="p-3">
+<h3 class="font-medium">Ein Tag in meinem Leben als Content Creator!</h3>
+<p class="text-xs text-gray-500 mt-1">2.4K Aufrufe • vor 3 Tagen</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative bg-primary/5 h-[211px] flex items-center justify-center">
+<i class="ri-youtube-line text-4xl text-primary"></i>
+<div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-1 rounded">25:18</div>
+</div>
+<div class="p-3">
+<h3 class="font-medium">Q&A: Eure Fragen - Meine Antworten!</h3>
+<p class="text-xs text-gray-500 mt-1">1.8K Aufrufe • vor 1 Woche</p>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative bg-primary/5 h-[211px] flex items-center justify-center">
+<i class="ri-youtube-line text-4xl text-primary"></i>
+<div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white text-xs px-1 rounded">18:32</div>
+</div>
+<div class="p-3">
+<h3 class="font-medium">Meine Story: Wie alles begann!</h3>
+<p class="text-xs text-gray-500 mt-1">3.1K Aufrufe • vor 2 Wochen</p>
+</div>
+</div>
+</div>
+</section>
+<!-- TikTok Feed -->
+<section class="mt-6 px-4">
+<div class="flex justify-between items-center mb-3">
+<h2 class="text-lg font-semibold">TikTok Highlights</h2>
+<a href="https://tiktok.com/@adrian_051109" class="text-primary text-sm cursor-pointer">Alle ansehen</a>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative pb-[177%] bg-primary/5">
+<div class="absolute inset-0 flex items-center justify-center">
+<i class="ri-tiktok-line text-4xl text-primary"></i>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+<p class="text-white text-xs">Meine Morgenroutine 🌞 #lifestyle</p>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-lg shadow-md overflow-hidden">
+<div class="relative pb-[177%] bg-primary/5">
+<div class="absolute inset-0 flex items-center justify-center">
+<i class="ri-tiktok-line text-4xl text-primary"></i>
+</div>
+<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-2">
+<p class="text-white text-xs">Coffee Talk ☕️ #dailyvlog</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Discord Community -->
+<section class="mt-6 px-4">
+<h2 class="text-lg font-semibold mb-3">Discord Community</h2>
+<div class="bg-white rounded-lg shadow-md p-4">
+<div class="flex items-center">
+<div class="w-12 h-12 bg-[#5865F2] rounded-full flex items-center justify-center text-white">
+<i class="ri-discord-fill ri-xl"></i>
+</div>
+<div class="ml-3">
+<h3 class="font-medium">AdrianImSand Server</h3>
+<p class="text-sm text-gray-600">1,245 Mitglieder online</p>
+</div>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+<span class="ml-2 text-sm">💭 chat-lounge</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+<span class="ml-2 text-sm">💬 allgemein</span>
+</div>
+<div class="flex items-center">
+<div class="w-3 h-3 bg-green-500 rounded-full"></div>
+<span class="ml-2 text-sm">🎵 musik-bot</span>
+</div>
+</div>
+<a href="https://discord.gg/adrianImsand" class="mt-4 block w-full bg-[#5865F2] text-white py-2 text-center font-medium rounded-button cursor-pointer">
+Server beitreten
+</a>
+</div>
+</section>
+</div>
+<!-- Tab Bar -->
+<div class="fixed bottom-0 w-full bg-white border-t border-gray-200 z-50">
+<div class="max-w-[375px] mx-auto grid grid-cols-5">
+<a href="#" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center text-primary">
+<i class="ri-home-5-line"></i>
+</div>
+<span class="text-xs mt-1">Home</span>
+</a>
+<a href="https://twitch.tv/adrianImsand" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-twitch-line"></i>
+</div>
+<span class="text-xs mt-1">Twitch</span>
+</a>
+<a href="https://youtube.com/@adrianImsand" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-youtube-line"></i>
+</div>
+<span class="text-xs mt-1">YouTube</span>
+</a>
+<a href="https://tiktok.com/@adrian_051109" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-tiktok-line"></i>
+</div>
+<span class="text-xs mt-1">TikTok</span>
+</a>
+<a href="https://discord.gg/adrianImsand" class="flex flex-col items-center justify-center py-2 cursor-pointer">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-discord-line"></i>
+</div>
+<span class="text-xs mt-1">Discord</span>
+</a>
+</div>
+</div>
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.getElementById('menuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+menuButton.addEventListener('click', function() {
+if (mobileMenu.classList.contains('hidden')) {
+mobileMenu.classList.remove('hidden');
+} else {
+mobileMenu.classList.add('hidden');
+}
+});
+});
+</script>
+<script id="accessScript">
+document.addEventListener('DOMContentLoaded', function() {
+const accessInfo = document.createElement('div');
+accessInfo.className = 'fixed bottom-20 left-0 right-0 bg-primary text-white py-3 px-4 text-center z-50';
+accessInfo.innerHTML = `
+<p class="text-sm font-medium">Wichtiger Hinweis zum Öffnen der Seite:</p>
+<p class="text-sm mt-1">1. Speichern Sie den Code als .html Datei</p>
+<p class="text-sm mt-1">2. Öffnen Sie die Datei mit einem Browser (Chrome, Firefox, etc.)</p>
+<button class="mt-2 bg-white text-primary px-4 py-1 rounded-button text-sm">Verstanden</button>
+`;
+document.body.appendChild(accessInfo);
+const button = accessInfo.querySelector('button');
+button.addEventListener('click', function() {
+accessInfo.remove();
+});
+setTimeout(() => accessInfo.remove(), 60000);
+});
+</script>
+</body>
+</html>
